@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html {
+  font-size: 10px;
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: bisque;
+}
+
+.outerbox {
+  background-color: white;
+  height: 68rem;
+  padding-top: 1rem;
+  width: 45rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  border-radius: 3rem;
+}
+.title {
+  position: relative;
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+.title::after {
+  position: absolute;
+  content: "___________";
+  width: 100%;
+  height: 2rem;
+  left: 0;
+  top: 1rem;
+}
+.restart{
+  font-size: 1.5rem;
+  margin-top: 3rem;
+  color: red;
+  height: 3rem;
+  width: 10rem;
+  border-radius: 3rem;
+  border: none;
+  font-size: 1.3rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+.playernames {
+  display: flex;
+  font-size: 2rem;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 4rem;
+  padding-top: 2rem;
+  margin-bottom: 3rem;
+  gap: 1rem;
+}
+.playernames i {
+  font-size: 2rem;
+  margin-left: 0.5rem;
+}
+.playernames .player1, .player2 {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+input {
+  height: 3rem;
+  width: 15rem;
+  border-radius: 1rem;
+ outline: none;
+  font-size: 1.3rem;
+  font-weight: 600;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  margin-right: 4rem;
+  padding-left: 2rem;
+}
+.currentplay {
+  font-size: 2rem;
+}
+
+.layout {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+}
+.layout .rows {
+  display: flex;
+  gap: 3rem;
+}
+
+.layout .box {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+.blurred {
+  filter: blur(2px);
+  opacity: 0.5;
+}
+
+.playernames button {
+  height: 3rem;
+  width: 10rem;
+  border-radius: 3rem;
+  margin-right: 4rem;
+  border: none;
+  font-size: 1.3rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.playernames button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.winner-banner {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  height: 20rem;
+  width: 40rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+  align-items: center;
+  transform: translateX(-50%);
+  background-color: #222;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  font-size: 2rem;
+  z-index: 999;
+  animation: slideDown 0.5s ease;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateX(-50%) translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+}
